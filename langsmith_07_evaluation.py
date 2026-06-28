@@ -57,7 +57,6 @@ logger = logging.getLogger(__name__)
 
 # ── CONSTANTS ──────────────────────────────────────────────────────────────────
 MODEL_NAME        = "gpt-5.4-mini"
-MODEL_NAME_V2       = "gpt-5"
 DATASET_NAME      = "gstore-alert-classification-v2"
 LANGSMITH_PROJECT = os.getenv("LANGCHAIN_PROJECT", "gstore-ai-dev")
 
@@ -76,7 +75,7 @@ llm = ChatOpenAI(
 # it should always return the same score. Temperature=0 maximises this.
 # The classifier uses 0.1 (allows slight variation for better JSON formatting).
 judge_llm = ChatOpenAI(
-    model=MODEL_NAME_V2,      # same model as classifier — Challenge Q5 asks about this
+    model=MODEL_NAME,      # same model as classifier — Challenge Q5 asks about this
     temperature=0,
     api_key=os.getenv("OPENAI_API_KEY"),
 )
