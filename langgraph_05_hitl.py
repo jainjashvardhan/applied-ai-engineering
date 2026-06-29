@@ -75,7 +75,7 @@ _gemini = ChatGoogleGenerativeAI(
 llm = _openai.with_fallbacks([_gemini])
 
 
-# ── STRUCTURED OUTPUT: Alert Analysis ─────────────────────────────────────────
+# ── STRUCTURED OUTPUT: Alert Analysis  ─────────────────────────────────────────
 # DOMAIN KNOWLEDGE: Structured output forces the LLM to return a typed Pydantic
 # object. Critical for routing decisions — you cannot afford string parsing errors
 # when the output determines whether a human gets paged at 3am.

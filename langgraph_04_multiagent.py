@@ -495,7 +495,7 @@ def build_supervisor_agent() -> StateGraph:
           ├── "analytics" → [Send("analytics_worker")]
           └── other       → "general_handler"
                ↓               ↓              ↓
-          hr_worker    analytics_worker  general_handler
+          hr_worker    analytics_worker  general_handler 
                ↓               ↓              ↓
                └───────────────┴──────────────┘
                                ↓
